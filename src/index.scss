@@ -1,0 +1,251 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #001529;
+  color: rgb(255, 255, 255);
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-param {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+%box-shadow {
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #6dffff, 
+    -1px -1px 3px #6dffff;
+}
+
+.App {
+  font-family: 'Varela Round', sans-serif;
+  height: 80vh;
+  min-width: 450px;
+  max-width: 800px;
+  margin: 4rem auto 4rem auto;
+  padding: 2rem;
+  border-radius: 7px;
+  box-shadow: 1px 1px 12px #00eeff, 
+    -1px -1px 12px #00eeff;
+};
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.Header {
+  // position: fixed;
+  // z-index: 9;
+  // transition: all 0.3s ease;
+  
+  // background: rgb(207, 207, 207);
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  .title {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgb(255, 0, 0);
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 2.5rem;
+    border-bottom: 2px solid rgb(129, 49, 49);
+  }
+
+  .position {
+    font-size: 17px;
+    color: #00fbffcf;
+    font-weight: 900;
+    border-top: 2px solid white;
+  }
+
+  .num-color {
+    color: #ff0018;
+    font-size: 18px;
+    font-weight: 900;
+  }
+};
+
+.Search-Panel {
+  .search-input {
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+};
+
+.ui.input>input {
+  color: white;
+
+  &:focus {
+    color: white  ;
+  }
+} 
+
+.Todo-List {
+  font-family: 'Varela Round', sans-serif;
+  background-color: transparent;
+  margin: 20px 0 8px 0;
+
+  .list-group {
+    margin: 0 15px;
+  }
+
+  .list-group-item {
+    list-style: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .item {
+    font-weight: 900;
+    letter-spacing: 1px;
+    word-break: break-word;
+    text-transform: capitalize;
+  };
+
+  .input-checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: .3rem 1rem;
+  } 
+
+  .item-icons {
+    .item-icon {
+      font-size: 22px;
+      padding: 3px 0px;
+      margin: 0 .4rem;
+      cursor: pointer;
+      transition: transform .5s;
+    
+    }
+
+    .item-icons,.trash {
+      color:#a50010;
+      &:hover{
+        color: #ff0000;
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+    }
+
+    .item-icons,.edit {
+      color: #1a9b00;
+      &:hover{
+        color: #00ff15;
+        transform: scale3d(1.2, 1.2, 1.2);   
+      }
+    }
+  };
+
+  .icon-save-edit {
+    color:#6d6d6d;
+    padding: 2px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+      color:#23d300;
+    }
+  }
+
+  .input-save-edit {
+    min-width: 200px;
+    width: 500px;
+    background: transparent;
+    color:#0044aa;
+    text-transform: capitalize;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+  }
+
+  .save-button {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .done {
+    text-decoration: line-through #0044aa;
+    color: #0044aa;
+  }
+
+  .todo-list-count {
+    margin: 20px auto 20px auto;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0044aa;
+    font-weight: 900; 
+    max-width: 350px;
+    letter-spacing: 1px;
+    @extend %box-shadow;
+
+    .todo-list-number {
+      color: #ff0018;
+      font-size: 25px;
+    }
+  }
+};
+
+.Add-Todos {
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 900;
+};
+
+.active {
+  animation: del .6s linear;
+  transition: all .9s;
+}
+@keyframes del {
+  to{
+    opacity: 0; 
+    transform: rotate(1deg) skew(1deg) scale(2);
+  }
+}
+
+
+
+
+
