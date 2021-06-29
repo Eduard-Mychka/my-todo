@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import TodoItem from '../components/TodoItem'
+import TodoItem from '../TodoItem';
+
+import './todo-list.scss';
 
 export default class TodoList extends Component {
   render() {
@@ -7,7 +9,7 @@ export default class TodoList extends Component {
     return (
       <div className="Todo-List">
         <ul className="list-group list-group-flush">
-          {items.map((item, index) => {
+          {items.map(item => {
             return (
               <TodoItem 
                 item={item} 

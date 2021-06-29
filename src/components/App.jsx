@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Header from '../components/Header';
 import SearchPanel from '../components/SearchPanel';
-import TodoList from '../components/TodoList';
+import TodoList from '../components/ToDoList';
 import AddTodo from '../components/AddTodo';
 import Filter from './Filter';
 
@@ -40,10 +40,10 @@ export default class App extends Component {
   };
 
   onToggleDone = (id) => {
-    this.setState(({ todos }) => ({todos: todos.map(todo => id === todo.id ? {
-      ...todo, 
-      done: !todo.done,
-    } : todo) }))
+    this.setState(({ todos }) => ({todos: todos.map(todo => id === todo.id 
+      ? {...todo, done: !todo.done} 
+      : todo) 
+    }))
     console.log(id, 'done')
   };
 

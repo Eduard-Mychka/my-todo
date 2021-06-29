@@ -21,7 +21,7 @@ export default class AddTodo extends Component {
 
   render() {
     return (
-      <form className="ui fluid action input" onSubmit={this.onSubmitText}>
+      <form onSubmit={this.onSubmitText}>
         <Input
           className="Add-Todos me-1" 
           value={this.state.text}
