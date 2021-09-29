@@ -31,12 +31,10 @@ export default class App extends Component {
     this.setState(({ todos }) => 
       ({todos: [...todos, {id: Date.now(), title, done: false}]})
     )
-      console.log(title)
   };
 
   onDeleted = (id) => {
     this.setState(({ todos }) => ({todos: todos.filter(todo => id !== todo.id)}))
-    console.log(id, 'delete')
   };
 
   onToggleDone = (id) => {
@@ -44,7 +42,6 @@ export default class App extends Component {
       ? {...todo, done: !todo.done} 
       : todo) 
     }))
-    console.log(id, 'done')
   };
 
   onEditChange = (id, title) => {
@@ -52,7 +49,6 @@ export default class App extends Component {
       ...todo,
       title,
     } : todo) }))
-    console.log(id, 'edit')
   };
 
   render() {
